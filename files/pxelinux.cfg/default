@@ -1,14 +1,18 @@
 DEFAULT menu.c32
 PROMPT 0
 ALLOWOPTIONS 0
-TIMEOUT 100
+TIMEOUT 30
 #NOESCAPE 1
 
 #MENU SHIFTKEY 1
-MENU TITLE PXE Boot Menu
+MENU TITLE PXE Install OS
 
-DEFAULT Ubuntu
 LABEL Ubuntu
-MENU LABEL Ubuntu (Version 2004)
+MENU LABEL Ubuntu Server 20.04 (Auto Install)
 KERNEL 2004/casper/vmlinuz
-APPEND root=/dev/nfs boot=casper ip=dhcp netboot=nfs nfsroot=192.168.222.1:/c/pxesrv/files/2004 initrd=2004/casper/initrd autoinstall ds=nocloud-net;s=http://192.168.222.1/2004/kickstart/ quiet splash --
+APPEND root=/dev/nfs boot=casper ip=dhcp netboot=nfs nfsroot=192.168.222.1:/c/pxesrv/files/2004 initrd=2004/casper/initrd autoinstall ds=nocloud-net;s=http://192.168.222.1/2004/kickstart/ quiet --
+
+LABEL Ubuntu
+MENU LABEL Ubuntu Server 20.04 (Manual)
+KERNEL 2004/casper/vmlinuz
+APPEND root=/dev/nfs boot=casper ip=dhcp netboot=nfs nfsroot=192.168.222.1:/c/pxesrv/files/2004 initrd=2004/casper/initrd quiet --
