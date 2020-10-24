@@ -4,6 +4,8 @@
     
     -   Tải xuống dạng ZIP, giải nén và đưa vào PATH = C:\pxesrv\*.*
     
+    -   Tải ISO Ubuntu Server 2004, giải nén vào folder '2004'
+    
     -   Khởi động NFS Server:
     
          C:\pxesrv\WinNFSd-2.0\winnfsd.exe -id 0 0 C:\pxesrv\files\2004
